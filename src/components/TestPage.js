@@ -1,7 +1,18 @@
 import Vue from 'vue';
 
 import template from './TestPage.html'
-console.log(template);
+
 export default Vue.extend({
-  template: template
+  template: template,
+
+  asyncComputed: {
+    project() {
+      return Promise.resolve().then(()=>{
+        return {
+          id: 1,
+          title: 'title'
+        }
+      })
+    }
+  }
 })
