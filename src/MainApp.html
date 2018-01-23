@@ -1,0 +1,11 @@
+<div id="main-app" v-if="ready">
+  <div>Profile: {{profile.authenticated}}</div>
+
+  <div class="menu">
+    <a href="/#/">Home</a>
+    <a href="/#/test">Test</a>
+  </div>
+  <div class="page-container">
+      <router-view/>
+  </div>
+</div>

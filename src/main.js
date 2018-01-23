@@ -2,16 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import AsyncComputed from 'vue-async-computed'
-import App from './App'
-import router from './router'
 
+import MainApp from './MainApp'
 
 Vue.config.productionTip = false
 Vue.use(AsyncComputed);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+  components: { MainApp: MainApp},
+  template: '<MainApp/>'
 })
