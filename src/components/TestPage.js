@@ -13,6 +13,18 @@ export default Vue.extend({
           title: 'title'
         }
       })
+    },
+    profile() {
+      return Promise.resolve().then(()=>{
+        return {
+          authenticated: false
+        }
+      })
+    }
+  },
+  computed: {
+    ready() {
+      return this.project && this.profile;
     }
   }
 })
