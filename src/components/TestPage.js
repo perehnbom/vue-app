@@ -4,6 +4,9 @@ import template from './TestPage.html'
 
 export default Vue.extend({
   template: template,
+  created: function(){
+    console.log('created')
+  },
 
   asyncComputed: {
     project() {
@@ -25,6 +28,11 @@ export default Vue.extend({
   computed: {
     ready() {
       return this.project && this.profile;
+    },
+    myProject() {
+      return {
+        title: this.project.title
+      }
     }
   }
 })

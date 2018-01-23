@@ -8,11 +8,15 @@ export default Vue.extend({
   name: 'MainApp',
   asyncComputed: {
     profile() {
-      return Promise.resolve().then(()=>{
-        return {
-          authenticated: false
-        }
-      })
+      return new Promise(function(resolve){
+        setTimeout(()=>{
+          console.log('resolve profile');
+          resolve( {
+            authenticated: false
+          })
+        }, 500)
+
+      });
     }
   },
   computed: {
