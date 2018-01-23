@@ -5,6 +5,8 @@ import AsyncComputed from 'vue-async-computed'
 
 import MainApp from './MainApp'
 
+import cssRule from './common/cssRule';
+
 Vue.config.productionTip = false
 Vue.use(AsyncComputed);
 /* eslint-disable no-new */
@@ -13,3 +15,6 @@ new Vue({
   components: { MainApp: MainApp},
   template: '<MainApp/>'
 })
+
+cssRule('body', {color: 'blue'})
+cssRule('div', {padding: '5px'})
